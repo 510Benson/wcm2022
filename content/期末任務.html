@@ -139,8 +139,86 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='課程心得.html'>Next</a> >> 課程心得<br /><h1>網際網路</h1>
-<br /> <a href='課程心得.html'>Next</a> >> 課程心得</div>
+    <div id="tipue_search_content">run << <a href='run.html'>Previous</a> <br /><h1>期末任務</h1>
+<p></p>
+<p>英国国旗<canvas height="120px" id="myCanvus" style="transform: scale(2.5) translate(75px,30px);" width="240px"> 出现文字表示你的浏览器不支持HTML5 </canvas><br/><br/><br/><br/><br/><br/></p>
+<script type="text/javascript">
+alert('alert'+$('body').length);
+function draw(){
+        var canvas=document.getElementById("myCanvus");
+        var canvasWidth=240;
+        var canvasHeight=120;
+
+        var context=canvas.getContext("2d");
+        
+        context.fillStyle = "#FFFFFF";
+        context.fillRect(0, 0, canvasWidth, canvasHeight);
+        
+  
+        context.fillStyle = "#012169";
+        context.fillRect(0, 0, 100, 40);
+        context.fillRect(140, 0, 100, 40);
+        context.fillRect(0, 80, 100, 40);
+        context.fillRect(140, 80, 100, 40);
+
+      
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(26.56));
+        context.fillStyle = "#FFFFFF";
+        context.fillRect(-300, -12, 600, 24);
+        context.restore();
+
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(-26.56));
+        context.fillStyle = "#FFFFFF";
+        context.fillRect(-300, -12, 600, 24);
+        context.restore();
+
+ 
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(26.56));
+        context.fillStyle = "#C8102E";
+        context.fillRect(-300, 0, 300, 8);
+        context.restore();
+
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(-26.56));
+        context.fillStyle = "#C8102E";
+        context.fillRect(-300, 0, 300, 8);
+        context.restore();
+
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(-26.56));
+        context.fillStyle = "#C8102E";
+        context.fillRect(0, -8, 300, 8);
+        context.restore();
+
+        context.save();
+        context.translate(120,60);
+        context.rotate(getRad(26.56));
+        context.fillStyle = "#C8102E";
+        context.fillRect(0, -8, 300, 8);
+        context.restore();
+
+
+        context.fillStyle = "#FFFFFF";
+        context.fillRect(0, 40, 240, 40);
+
+
+        context.fillStyle = "#C8102E";
+        context.fillRect(0, 48, 240, 24);
+        context.fillRect(108, 0, 24, 120);
+    }
+
+    function getRad(degree){
+        return degree/180*Math.PI;
+    }
+</script><br />run << <a href='run.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
