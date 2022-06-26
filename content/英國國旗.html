@@ -139,11 +139,103 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">課程心得 << <a href='課程心得.html'>Previous</a> <a href='評分依據.html'>Next</a> >> 評分依據<br /><h1>以token推送的坎坷過程</h1>
-<p>仔老師跟我說我在github倉儲上只有執行三次時我發現原來我之前做的內容都沒有傳送上去，可能是推送出了些問題所以我去github看發現我的token過期了需要重新設定，我複製完token后去我的wcm2022的git倉儲找出我的config內設定我token的檔案來做修改，修改後去cmd提交檔案(acp "第二次提交")時cmd還需要我github的名稱及電子信箱</p>
-<p>Y:\wcm2022&gt;git config --global user.email "51033112@gm.nfu.edu.tw"</p>
-<p>Y:\wcm2022&gt;git config --global user.name "510Benson"</p>
-<p>后就推送成功啦!!!</p><br />課程心得 << <a href='課程心得.html'>Previous</a> <a href='評分依據.html'>Next</a> >> 評分依據</div>
+    <div id="tipue_search_content">期末任務 << <a href='期末任務.html'>Previous</a> <a href='過程及心得.html'>Next</a> >> 過程及心得<br /><h1>英國國旗</h1>
+<!--導入 brython.js 程式庫-->
+<script src="https://mde.tw/wcm2022_guide/cmsimde/static/brython.js"></script>
+<!--導入 brython_stdlib.js 標準程式庫-->
+<script src="https://mde.tw/wcm2022_guide/cmsimde/static/brython_stdlib.js"></script>
+<!--啟動 brython-->
+<script>
+  window.onload=function(){
+  brython();
+  }
+  function getRad(degree){
+      return degree/180*math.pi;
+  }
+</script>
+<!--執行所需要的 Brython 程式-->
+<script type="text/python3">
+  # 畫中華民國國旗
+  # 導入 doc
+  from browser import document as doc
+  # 以下將利用 html 產生所需的繪圖畫布
+  from browser import html
+  # 利用 math 函式庫執行三角函數運算
+  import math
+  canvas = html.CANVAS(width = 600, height = 300)#轉90度
+  #canvas.style = {"width": "250%"}
+  canvas.id = "taiwan_flag"
+  # 將圖畫至 id 為 brython_div 的 cnavas 標註
+  brython_div = doc["brython_div"]
+  brython_div <= canvas
+  # 準備繪圖畫布
+  canvas = doc["taiwan_flag"]
+  ctx = canvas.getContext("2d")
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(0, 0, 600, 300);
+  
+  # 先画角上蓝色方块
+  ctx.fillStyle = "#012169";
+  ctx.fillRect(0, 0, 250, 100);
+  ctx.fillRect(350, 0, 250, 100);
+  ctx.fillRect(0, 200, 250, 100);
+  ctx.fillRect(350, 200, 250, 100);
+
+  # 用旋转的白色长条去盖上蓝色方块,覆盖完出现八个三角块
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(26.56/180*math.pi);
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(-750, -30, 1500, 60);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(-26.56/180*math.pi);
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(-750, -30, 1500, 60);
+  ctx.restore();
+
+  # 四个红条
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(26.56/180*math.pi);
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(-750, 0, 750, 20);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(-26.56/180*math.pi);
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(-750, 0, 750, 20);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(-26.56/180*math.pi);
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(0, -20, 750, 20);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(300,150);
+  ctx.rotate(26.56/180*math.pi);
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(0, -20, 750, 20);
+  ctx.restore();
+
+  # 用一个白条去把中间部分的多余红边去掉
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(0, 100, 600, 100);
+
+  # 画中间的红色十字
+  ctx.fillStyle = "#C8102E";
+  ctx.fillRect(0, 120, 600, 60);
+  ctx.fillRect(270, 0, 60, 300);
+  #ctx.fill()
+</script>
+<div id="brython_div"></div><br />期末任務 << <a href='期末任務.html'>Previous</a> <a href='過程及心得.html'>Next</a> >> 過程及心得</div>
         
     <!-- footer -->
       <div class="container">

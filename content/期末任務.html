@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='網際網路.html'>網際網路</a><ul class='dropdown'><li><a href='課程心得.html'>課程心得</a><li><a href='以token推送的坎坷過程.html'>以token推送的坎坷過程</a></li></ul><li><a href='評分依據.html'>評分依據</a><li><a href='俄羅斯方塊.html'>俄羅斯方塊</a><li><a href='run.html'>run</a><li><a href='期末任務.html'>期末任務</a></li>
+                     <li class='has-children'><a href='網際網路.html'>網際網路</a><ul class='dropdown'><li><a href='課程心得.html'>課程心得</a><li><a href='以token推送的坎坷過程.html'>以token推送的坎坷過程</a></li></ul><li><a href='評分依據.html'>評分依據</a><li><a href='俄羅斯方塊.html'>俄羅斯方塊</a><li><a href='run.html'>run</a><li class='has-children'><a href='期末任務.html'>期末任務</a><ul class='dropdown'><li><a href='英國國旗.html'>英國國旗</a><li><a href='過程及心得.html'>過程及心得</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,103 +139,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">run << <a href='run.html'>Previous</a> <br /><h1>期末任務</h1>
-<!--導入 brython.js 程式庫-->
-<script src="https://mde.tw/wcm2022_guide/cmsimde/static/brython.js"></script>
-<!--導入 brython_stdlib.js 標準程式庫-->
-<script src="https://mde.tw/wcm2022_guide/cmsimde/static/brython_stdlib.js"></script>
-<!--啟動 brython-->
-<script>
-  window.onload=function(){
-  brython();
-  }
-  function getRad(degree){
-      return degree/180*math.pi;
-  }
-</script>
-<!--執行所需要的 Brython 程式-->
-<script type="text/python3">
-  # 畫中華民國國旗
-  # 導入 doc
-  from browser import document as doc
-  # 以下將利用 html 產生所需的繪圖畫布
-  from browser import html
-  # 利用 math 函式庫執行三角函數運算
-  import math
-  canvas = html.CANVAS(width = 600, height = 300)#轉90度
-  #canvas.style = {"width": "250%"}
-  canvas.id = "taiwan_flag"
-  # 將圖畫至 id 為 brython_div 的 cnavas 標註
-  brython_div = doc["brython_div"]
-  brython_div <= canvas
-  # 準備繪圖畫布
-  canvas = doc["taiwan_flag"]
-  ctx = canvas.getContext("2d")
-  ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(0, 0, 600, 300);
-  
-  # 先画角上蓝色方块
-  ctx.fillStyle = "#012169";
-  ctx.fillRect(0, 0, 250, 100);
-  ctx.fillRect(350, 0, 250, 100);
-  ctx.fillRect(0, 200, 250, 100);
-  ctx.fillRect(350, 200, 250, 100);
-
-  # 用旋转的白色长条去盖上蓝色方块,覆盖完出现八个三角块
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(26.56/180*math.pi);
-  ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(-750, -30, 1500, 60);
-  ctx.restore();
-
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(-26.56/180*math.pi);
-  ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(-750, -30, 1500, 60);
-  ctx.restore();
-
-  # 四个红条
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(26.56/180*math.pi);
-  ctx.fillStyle = "#C8102E";
-  ctx.fillRect(-750, 0, 750, 20);
-  ctx.restore();
-
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(-26.56/180*math.pi);
-  ctx.fillStyle = "#C8102E";
-  ctx.fillRect(-750, 0, 750, 20);
-  ctx.restore();
-
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(-26.56/180*math.pi);
-  ctx.fillStyle = "#C8102E";
-  ctx.fillRect(0, -20, 750, 20);
-  ctx.restore();
-
-  ctx.save();
-  ctx.translate(300,150);
-  ctx.rotate(26.56/180*math.pi);
-  ctx.fillStyle = "#C8102E";
-  ctx.fillRect(0, -20, 750, 20);
-  ctx.restore();
-
-  # 用一个白条去把中间部分的多余红边去掉
-  ctx.fillStyle = "#FFFFFF";
-  ctx.fillRect(0, 100, 600, 100);
-
-  # 画中间的红色十字
-  ctx.fillStyle = "#C8102E";
-  ctx.fillRect(0, 120, 600, 60);
-  ctx.fillRect(270, 0, 60, 300);
-  #ctx.fill()
-</script>
-<div id="brython_div"></div><br />run << <a href='run.html'>Previous</a> </div>
+    <div id="tipue_search_content">run << <a href='run.html'>Previous</a> <a href='英國國旗.html'>Next</a> >> 英國國旗<br /><h1>期末任務</h1>
+<br />run << <a href='run.html'>Previous</a> <a href='英國國旗.html'>Next</a> >> 英國國旗</div>
         
     <!-- footer -->
       <div class="container">
